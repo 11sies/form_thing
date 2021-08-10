@@ -1,0 +1,133 @@
+:root {
+  --background: hsl(0, 0%, 10%);
+  --text-color: hsl(0, 0%, 100%);
+  --main-background: hsl(0, 0%, 20%);
+  --ui-background: hsl(0, 0%, 90%);
+  --link: hsl(0, 0%, 80%);
+  --link-hover: hsl(20, 50%, 60%);
+  --link-active: hsl(0, 0%, 80%);
+  --link-visited: hsl(0, 0%, 80%);
+  --rounded: 6px;
+  --reg-border: 2px solid grey;
+  --foot-width: 1200px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+h1 {
+  font-family: 'Sarpanch', sans-serif;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+p {
+  text-align: center;
+  padding-top: 1em;
+}
+
+main {
+  width: min(100%, 800px);    /* max-width wasn't working, so here is DIY max-width */
+  background-color: var(--main-background);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 1.5em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-label {
+  font-size: 1.2em;
+  padding-bottom: .5em;
+}
+
+input[type='radio'], input[type='checkbox'] {
+  transform: scale(1.5);
+  padding-right: 2em;
+}
+
+.user-interface {
+  background-color: var(--ui-background);
+  padding: .7em;
+  border-radius: var(--rounded);
+  border: var(--reg-border);
+}
+
+.check-radio {
+  padding:.5em;
+}
+
+.check-radio span {
+  padding-left: 1.7em;
+}
+
+button[type="submit"] {
+  align-self: center;
+  width: 12em;
+  border-radius: var(--rounded);
+  border: var(--reg-border);
+  background-color: hsl(120, 50%, 40%);
+  font-size: 1.3em;
+  color: hsl(0, 0%, 100%);
+  padding: .5em;
+  font-weight: 600;
+  letter-spacing: .05em;
+}
+
+button[type="submit"]:hover {
+  background-color: hsl(105, 45%, 43%);
+}
+
+button[type="submit"]:active {
+  background-color: hsl(127, 30%, 40%);
+}
+
+::placeholder {
+  font-size: 1.2em;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+select {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: black;
+}
+
+a {color: var(--link);}
+a:hover {color: var(--link-hover);}
+a:active {color: var(--link-active);}
+a:visited {color: var(--link-visited);}
+
+footer {
+  font-size: .8em;
+  max-width: var(--foot-width);
+  padding: 3em;
+}
+
+/* The below declarations remove the arrows from the number input field. The code was borrowed from w3 Schools.
+https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
+*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

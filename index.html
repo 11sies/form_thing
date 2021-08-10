@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>form_thing</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!--
+  This page was created by @11sies as a project for freecodecamp.org
+  The project parameters can be found here:
+  https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form
+-->
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sarpanch|Noto+Sans+JP">
+
+<header>
+  <h1>Form Thing</h1>
+</header>
+
+<main>
+  <p>To be honest, this form doesn't actually do anything. It's just for practice.</p>
+  <form id="survey-form">
+    <div class="item">
+      <label class="item-label" for="name" id="name-label">Name</label>
+      <input class="user-interface" type="text" placeholder="Name" id="name" name="name" required>
+    </div>
+    <div class="item">
+      <label class="item-label" for="email" id="email-label">Email</label>
+      <input class="user-interface" type="email" placeholder="Email" id="email" name="email" required>
+    </div>
+    <div class="item">
+      <label class="item-label" for="age" id="number-label">Age</label>
+      <input class="user-interface" id="number" type="number" min="18" max="111" placeholder="Age (optional)" name="age" value="age">
+    </div>
+    <div class="item">
+      <label class="item-label" for="situation">Current life situation</label>
+      <select class="user-interface" id="situation" name="situation">
+        <option value="select" disabled selected hidden>--Select an option--</option>
+        <option value="best">Living my best life</option>
+        <option value="grind">Struggling under the grind</option>
+        <option value="hussle">Side husslin'</option>
+        <option value="debt">Student accumulating debt</option>
+        <option value="training">In training for future daily grind</option>
+        <option value="moderate-unemployed">Moderately unemployed</option>
+        <option value="very-unemployed">Very unemployed</option>
+      </select>
+    </div>
+    <div class="item">
+      <label class="item-label" for="recommend">Would you recommend this survey form to a friend?</label>
+      <label class="check-radio" for="prob"><input type="radio" name="recommend" value="prob" id="prob"><span>Prob</span></label>
+      <label class="check-radio" for="def"><input type="radio" name="recommend" value="def" id="def"><span>Def</span></label>
+      <label class="check-radio" for="nop"><input type="radio" name="recommend" value="nop" id="nop"><span>Nop</span></label>
+    </div>
+    <div class="item">
+      <label class="item-label" for="features">What is your favorite feature of this form?</label>
+      <select class="user-interface" name="features" id="features">
+        <option value="select" disabled selected hidden>--Select an option--</option>
+        <option value="text">Text input</option>
+        <option value="radio">Radio buttons</option>
+        <option value="dropdown">Dropdown menus</option>
+      </select>
+    </div>
+    <div class="item">
+      <label class="item-label" for="features">What additional features would you like to see?</label>
+      <label class="check-radio" for="hamburger"><input class="user-interface" type="checkbox" name="features" value="hamburger" id="hamburger"><span>Unnecessary hamburger menus</span></label>
+      <label class="check-radio" for="wasted"><input class="user-interface" type="checkbox" name="features" value="wasted" id="wasted"><span>Wasted space</span></label>
+      <label class="check-radio" for="redundant-1"><input class="user-interface" type="checkbox" name="features" value="redundant-1" id="redundant-1"><span>Redundancy</span></label>
+      <label class="check-radio" for="drop"><input class="user-interface" type="checkbox" name="features" value="drop" id="drop"><span>Dropdown menus with only one item</span></label>
+      <label class="check-radio" for="intentionally-incorrect"><input class="user-interface" type="checkbox" name="features" value="unclickable" id="unclickable"><span>Unclickable dropbox text</span></label>
+      <label class="check-radio" for="density"><input class="user-interface" type="checkbox" name="features" value="density" id="density"><span>Absurdly low information density</span></label>
+      <label class="check-radio" for="redundant-2"><input class="user-interface" type="checkbox" name="features" value="redundant-2" id="redundant-2"><span>Redundancy</span></label>
+    </div>
+    <div class="item">
+      <label class="item-label" for="mention">Anything else you'd like to mention?</label>
+      <textarea class="user-interface" name="mention" id="mention"placeholder="type type type type"></textarea>
+    </div>
+    <div class="item">
+      <button type="submit" id="submit">Submit</button>
+    </div>
+  </form>
+</main>
+
+<footer>
+  This page was created as a project for <a href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form">freecodecamp.org</a>
+</footer>
+</body>
+</html>
